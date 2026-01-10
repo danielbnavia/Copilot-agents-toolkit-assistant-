@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.0/schema.json",
+  "version": "v1.0",
+  "name": "Customer Support Agent",
+  "description": "AI-powered customer support agent that helps users with product inquiries, technical issues, and ticket management. Can search knowledge base, create tickets, and provide troubleshooting assistance.",
+  "instructions": "$[file('instructions.txt')]",
+  "conversation_starters": [
+    {
+      "title": "Check ticket status",
+      "text": "What's the status of my support ticket #12345?"
+    },
+    {
+      "title": "Report an issue",
+      "text": "I'm having trouble logging into my account"
+    },
+    {
+      "title": "Product question",
+      "text": "How do I reset my password?"
+    },
+    {
+      "title": "Get help",
+      "text": "I need technical support for a software issue"
+    }
+  ],
+  "capabilities": [
+    {
+      "name": "WebSearch"
+    },
+    {
+      "name": "OneDriveAndSharePoint",
+      "items_by_url": [
+        {
+          "url": "https://contoso.sharepoint.com/sites/Support"
+        }
+      ]
+    }
+  ]
+}

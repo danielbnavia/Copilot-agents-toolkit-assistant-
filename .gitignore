@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Configuration
+.env
+.env.local
+*.local
+~/.m365-assistant-config.json
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Temporary files
+/tmp/
+*.tmp
+*.bak
+
+# Generated agent files (when testing)
+*-agent.json
+*-bot/
+*-workflow/
+*-card.json
+
+# Node modules (if using Teams Toolkit)
+node_modules/
+package-lock.json
+
+# Teams Toolkit
+.fx/
+.localConfigs/
+*.user
+
+# Azure
+.azure/
+
+# Build artifacts
+*.zip
+
+# OS specific
+Thumbs.db
+.Trash-*
