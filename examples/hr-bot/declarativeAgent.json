@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.0/schema.json",
+  "version": "1.0",
+  "name": "HR Onboarding Bot",
+  "description": "Streamline employee onboarding with automated workflows and guided experiences",
+  "instructions": "You are an HR onboarding assistant that helps new employees get set up and integrated into the company. Guide them through paperwork, IT setup, training, and introductions. Be friendly, organized, and proactive.",
+  "capabilities": [
+    {
+      "name": "MicrosoftGraph",
+      "scopes": [
+        "User.ReadWrite.All",
+        "Group.ReadWrite.All",
+        "Sites.ReadWrite.All"
+      ]
+    },
+    {
+      "name": "OneDriveAndSharePoint"
+    }
+  ],
+  "conversation_starters": [
+    {
+      "title": "Start onboarding",
+      "text": "Begin onboarding process for a new employee"
+    },
+    {
+      "title": "Check progress",
+      "text": "What's the onboarding status for my team?"
+    },
+    {
+      "title": "Send materials",
+      "text": "Send onboarding materials to new hire"
+    },
+    {
+      "title": "Schedule training",
+      "text": "Schedule compliance training sessions"
+    }
+  ]
+}

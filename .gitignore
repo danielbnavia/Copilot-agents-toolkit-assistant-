@@ -54,10 +54,15 @@ htmlcov/
 *.bak
 
 # Generated agent files (when testing)
+# Note: Example projects in examples/ are NOT ignored
 *-agent.json
-*-bot/
+test-*-bot/
+generated-*-bot/
 *-workflow/
 *-card.json
+
+# But allow examples directory
+!examples/**
 
 # Node modules (if using Teams Toolkit)
 node_modules/
