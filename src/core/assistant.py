@@ -39,6 +39,12 @@ I can assist you with:
   🎨 Adaptive Cards - Rich, interactive cards for M365 apps
   🔄 Workflows - Automated business processes
   📱 Apps - Full Microsoft 365 applications
+  📬 Message Extensions - Search and actions in Teams conversations
+  🔌 API Plugins - OpenAPI-based service integrations
+  🔗 Graph Connectors - Index external data sources
+  🎨 Copilot Studio - Low-code agent building (NEW 2025)
+  ⚡ Power Platform - Power Automate, Dataverse integration (NEW 2025)
+  ☁️  Azure AI - OpenAI GPT-4/GPT-5, AI Search, RAG (NEW 2025)
 
 Type 'help' for available commands or 'exit' to quit.
         """
@@ -324,4 +330,52 @@ Available Commands:
         from ..workflows import WorkflowHelper
         
         helper = WorkflowHelper(verbose=self.verbose)
+        helper.interactive_mode()
+        
+    def run_message_extensions_mode(self):
+        """Run in message extensions mode."""
+        print("\n📬 Message Extensions Mode\n")
+        from ..message_extensions import MessageExtensionHelper
+        
+        helper = MessageExtensionHelper(verbose=self.verbose)
+        helper.interactive_mode()
+        
+    def run_api_plugins_mode(self):
+        """Run in API plugins mode."""
+        print("\n🔌 API Plugins Mode\n")
+        from ..api_plugins import APIPluginHelper
+        
+        helper = APIPluginHelper(verbose=self.verbose)
+        helper.interactive_mode()
+        
+    def run_graph_connectors_mode(self):
+        """Run in Graph connectors mode."""
+        print("\n🔗 Graph Connectors Mode\n")
+        from ..graph_connectors import GraphConnectorHelper
+        
+        helper = GraphConnectorHelper(verbose=self.verbose)
+        helper.interactive_mode()
+        
+    def run_copilot_studio_mode(self):
+        """Run in Copilot Studio mode."""
+        print("\n🎨 Copilot Studio Integration Mode\n")
+        from ..copilot_studio import CopilotStudioHelper
+        
+        helper = CopilotStudioHelper(verbose=self.verbose)
+        helper.interactive_mode()
+        
+    def run_power_platform_mode(self):
+        """Run in Power Platform mode."""
+        print("\n⚡ Power Platform Integration Mode\n")
+        from ..power_platform import PowerPlatformHelper
+        
+        helper = PowerPlatformHelper(verbose=self.verbose)
+        helper.interactive_mode()
+        
+    def run_azure_integration_mode(self):
+        """Run in Azure AI Services mode."""
+        print("\n☁️  Azure AI Services Integration Mode\n")
+        from ..azure_integration import AzureIntegrationHelper
+        
+        helper = AzureIntegrationHelper(verbose=self.verbose)
         helper.interactive_mode()

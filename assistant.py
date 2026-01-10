@@ -17,7 +17,9 @@ def main():
     
     parser.add_argument(
         "--mode",
-        choices=["interactive", "declarative-agent", "teams-agent", "adaptive-cards", "workflows"],
+        choices=["interactive", "declarative-agent", "teams-agent", "adaptive-cards", 
+                 "workflows", "message-extensions", "api-plugins", "graph-connectors",
+                 "copilot-studio", "power-platform", "azure-integration"],
         default="interactive",
         help="Specify the mode of operation"
     )
@@ -64,6 +66,18 @@ def main():
         assistant.run_adaptive_cards_mode()
     elif args.mode == "workflows":
         assistant.run_workflows_mode()
+    elif args.mode == "message-extensions":
+        assistant.run_message_extensions_mode()
+    elif args.mode == "api-plugins":
+        assistant.run_api_plugins_mode()
+    elif args.mode == "graph-connectors":
+        assistant.run_graph_connectors_mode()
+    elif args.mode == "copilot-studio":
+        assistant.run_copilot_studio_mode()
+    elif args.mode == "power-platform":
+        assistant.run_power_platform_mode()
+    elif args.mode == "azure-integration":
+        assistant.run_azure_integration_mode()
     
     return 0
 
