@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.0/schema.json",
+  "version": "v1.0",
+  "name": "Your Agent Name",
+  "description": "Brief description of what your agent does (max 1000 characters)",
+  "instructions": "$[file('instructions.txt')]",
+  "conversation_starters": [
+    {
+      "title": "Example starter 1",
+      "text": "Example query that demonstrates a key capability"
+    },
+    {
+      "title": "Example starter 2",
+      "text": "Another example showing what users can ask"
+    },
+    {
+      "title": "Example starter 3",
+      "text": "A third example covering a different feature"
+    }
+  ],
+  "capabilities": [
+    {
+      "name": "WebSearch"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Configuration
+.env
+.env.local
+*.local
+~/.m365-assistant-config.json
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Temporary files
+/tmp/
+*.tmp
+*.bak
+
+# Generated agent files (when testing)
+# Note: Example projects in examples/ are NOT ignored
+*-agent.json
+test-*-bot/
+generated-*-bot/
+*-workflow/
+*-card.json
+
+# But allow examples directory
+!examples/**
+
+# Node modules (if using Teams Toolkit)
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Web UI build artifacts
+web-ui/dist/
+web-ui/.vite/
+web-ui/.next/
+web-ui/out/
+
+# Teams Toolkit
+.fx/
+.localConfigs/
+*.user
+
+# Azure
+.azure/
+
+# Build artifacts
+*.zip
+
+# OS specific
+Thumbs.db
+.Trash-*
+
+# API
+api/__pycache__/
+api/*.db
+api/*.sqlite
+
+# Video tutorials
+video-tutorials/footage/
+video-tutorials/renders/
+*.mp4
+*.mov
+*.avi

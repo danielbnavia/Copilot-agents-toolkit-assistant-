@@ -1,0 +1,51 @@
+# Microsoft 365 Agent Toolkit Assistant - Requirements
+
+# Core dependencies
+python>=3.8
+
+# Microsoft Bot Framework SDK - for Teams bots and agents
+botbuilder-core>=4.15.0
+botbuilder-schema>=4.15.0
+botbuilder-dialogs>=4.15.0
+botbuilder-ai>=4.15.0
+botbuilder-applicationinsights>=4.15.0
+botframework-connector>=4.15.0
+
+# Microsoft Teams SDK
+msal>=1.24.0
+msal-extensions>=1.0.0
+
+# Microsoft Graph SDK - for M365 integration
+msgraph-core>=0.2.2
+msgraph-sdk>=1.0.0
+azure-identity>=1.15.0
+
+# Azure SDK - for deployment and management
+azure-mgmt-resource>=23.0.0
+azure-mgmt-botservice>=2.0.0
+azure-mgmt-web>=7.0.0
+azure-storage-blob>=12.19.0
+
+# Adaptive Cards
+adaptivecards>=1.0.0
+
+# HTTP and async support
+aiohttp>=3.9.0
+requests>=2.31.0
+
+# Configuration and utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+click>=8.1.7
+
+# JSON Schema validation
+jsonschema>=4.20.0
+
+# Pretty printing and formatting
+rich>=13.7.0
+tabulate>=0.9.0
+
+# Testing utilities (optional but recommended)
+pytest>=7.4.3
+pytest-asyncio>=0.21.1
+pytest-cov>=4.1.0

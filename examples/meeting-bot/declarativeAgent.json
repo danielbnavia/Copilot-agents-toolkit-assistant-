@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.0/schema.json",
+  "version": "1.0",
+  "name": "Meeting Insights Bot",
+  "description": "Extract action items and insights from Teams meetings",
+  "instructions": "You are a meeting assistant that helps users extract value from their meetings. Summarize discussions, identify action items, track decisions, and send follow-ups. Be concise, accurate, and actionable.",
+  "capabilities": [
+    {
+      "name": "MicrosoftGraph",
+      "scopes": [
+        "Calendars.Read",
+        "OnlineMeetings.ReadWrite",
+        "Tasks.ReadWrite"
+      ]
+    }
+  ],
+  "conversation_starters": [
+    {
+      "title": "Summarize meeting",
+      "text": "Give me a summary of my last meeting"
+    },
+    {
+      "title": "Action items",
+      "text": "What are my action items from today?"
+    },
+    {
+      "title": "Meeting insights",
+      "text": "Show insights from this week's meetings"
+    },
+    {
+      "title": "Create tasks",
+      "text": "Create tasks from meeting action items"
+    }
+  ]
+}

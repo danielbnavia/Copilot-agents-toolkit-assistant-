@@ -1,0 +1,139 @@
+.workflow-designer {
+  display: grid;
+  grid-template-columns: 250px 1fr 300px;
+  gap: 1rem;
+  height: calc(100vh - 120px);
+}
+
+.toolbar {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow-y: auto;
+}
+
+.toolbar h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #0078d4;
+}
+
+.node-palette h3 {
+  font-size: 0.9rem;
+  margin: 1rem 0 0.5rem;
+  color: #666;
+}
+
+.node-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.node-btn {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+
+.node-btn:hover {
+  background: #f5f5f5;
+  border-color: #0078d4;
+}
+
+.node-btn.active {
+  background: #0078d4;
+  color: white;
+  border-color: #0078d4;
+}
+
+.node-icon {
+  font-size: 1.2rem;
+}
+
+.add-node-btn {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.add-node-btn:hover {
+  background: #106ebe;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.actions button {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background: #f5f5f5;
+}
+
+.canvas {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.properties-panel {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow-y: auto;
+}
+
+.properties-panel h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #0078d4;
+}
+
+.property-form {
+  margin-top: 1rem;
+}
+
+.property-form label {
+  display: block;
+  margin: 1rem 0 0.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.property-form input,
+.property-form textarea,
+.property-form select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.property-form textarea {
+  resize: vertical;
+}
