@@ -19,7 +19,8 @@ def main():
         "--mode",
         choices=["interactive", "declarative-agent", "teams-agent", "adaptive-cards", 
                  "workflows", "message-extensions", "api-plugins", "graph-connectors",
-                 "copilot-studio", "power-platform", "azure-integration"],
+                 "copilot-studio", "power-platform", "azure-integration",
+                 "template-manager", "test-framework", "cicd-helper"],
         default="interactive",
         help="Specify the mode of operation"
     )
@@ -78,6 +79,12 @@ def main():
         assistant.run_power_platform_mode()
     elif args.mode == "azure-integration":
         assistant.run_azure_integration_mode()
+    elif args.mode == "template-manager":
+        assistant.run_template_manager_mode()
+    elif args.mode == "test-framework":
+        assistant.run_test_framework_mode()
+    elif args.mode == "cicd-helper":
+        assistant.run_cicd_helper_mode()
     
     return 0
 

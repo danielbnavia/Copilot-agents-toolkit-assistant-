@@ -22,6 +22,9 @@ This assistant provides intelligent guidance, code generation, and best practice
 - 🛠️ **Official template library** for quick starts using Microsoft standards
 - ✅ **Validation and testing** utilities with schema compliance checking
 - 🔍 **Expert guidance** on capabilities, authentication, and deployment
+- 🏪 **Template Manager** - Browse and import from Agent Store (NEW)
+- 🧪 **Test Framework** - Automated testing with scenarios (NEW)
+- 🔧 **CI/CD Helper** - Generate pipeline configurations (NEW)
 
 ## Quick Start
 
@@ -54,6 +57,11 @@ python assistant.py --mode declarative-agent
 python assistant.py --mode teams-agent
 python assistant.py --mode adaptive-cards
 python assistant.py --mode workflows
+
+# Use CLI tools (NEW)
+python assistant.py --mode template-manager    # Browse and import templates
+python assistant.py --mode test-framework      # Generate and run tests
+python assistant.py --mode cicd-helper         # Create CI/CD pipelines
 ```
 
 ## Project Structure
@@ -69,10 +77,16 @@ python assistant.py --mode workflows
 │   ├── teams_agents/        # Teams Agents module
 │   ├── adaptive_cards/      # Adaptive Cards module
 │   ├── workflows/           # Workflows module
+│   ├── cli_tools/           # CLI Tools (NEW)
+│   │   ├── template_manager.py  # Agent Store browser
+│   │   ├── test_framework.py    # Testing framework
+│   │   └── cicd_helper.py       # CI/CD generator
 │   └── utils/               # Utility functions
 ├── templates/               # Project templates
 ├── examples/                # Example projects
 └── docs/                    # Documentation
+    ├── cli-tools.md         # CLI Tools guide (NEW)
+    └── ...
 ```
 
 ## Modules

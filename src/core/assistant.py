@@ -45,6 +45,9 @@ I can assist you with:
   🎨 Copilot Studio - Low-code agent building (NEW 2025)
   ⚡ Power Platform - Power Automate, Dataverse integration (NEW 2025)
   ☁️  Azure AI - OpenAI GPT-4/GPT-5, AI Search, RAG (NEW 2025)
+  🏪 Template Manager - Agent Store browser and template importer (CLI)
+  🧪 Test Framework - Automated testing with scenarios (CLI)
+  🔧 CI/CD Helper - Generate pipeline configurations (CLI)
 
 Type 'help' for available commands or 'exit' to quit.
         """
@@ -378,4 +381,28 @@ Available Commands:
         from ..azure_integration import AzureIntegrationHelper
         
         helper = AzureIntegrationHelper(verbose=self.verbose)
+        helper.interactive_mode()
+        
+    def run_template_manager_mode(self):
+        """Run in Template Manager mode."""
+        print("\n🏪 Template Manager Mode\n")
+        from ..cli_tools import TemplateManager
+        
+        manager = TemplateManager(verbose=self.verbose)
+        manager.interactive_mode()
+        
+    def run_test_framework_mode(self):
+        """Run in Test Framework mode."""
+        print("\n🧪 Test Framework Mode\n")
+        from ..cli_tools import TestFramework
+        
+        framework = TestFramework(verbose=self.verbose)
+        framework.interactive_mode()
+        
+    def run_cicd_helper_mode(self):
+        """Run in CI/CD Helper mode."""
+        print("\n🔧 CI/CD Helper Mode\n")
+        from ..cli_tools import CICDHelper
+        
+        helper = CICDHelper(verbose=self.verbose)
         helper.interactive_mode()
