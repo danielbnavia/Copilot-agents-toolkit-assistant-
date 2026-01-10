@@ -62,6 +62,14 @@ htmlcov/
 # Node modules (if using Teams Toolkit)
 node_modules/
 package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Web UI build artifacts
+web-ui/dist/
+web-ui/.vite/
+web-ui/.next/
+web-ui/out/
 
 # Teams Toolkit
 .fx/
@@ -77,3 +85,15 @@ package-lock.json
 # OS specific
 Thumbs.db
 .Trash-*
+
+# API
+api/__pycache__/
+api/*.db
+api/*.sqlite
+
+# Video tutorials
+video-tutorials/footage/
+video-tutorials/renders/
+*.mp4
+*.mov
+*.avi

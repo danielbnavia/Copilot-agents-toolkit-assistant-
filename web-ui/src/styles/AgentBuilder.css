@@ -1,0 +1,140 @@
+.agent-builder {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.agent-builder h2 {
+  color: #0078d4;
+  margin-bottom: 1.5rem;
+}
+
+.builder-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-section {
+  position: relative;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-section textarea {
+  resize: vertical;
+}
+
+.char-count {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  font-size: 0.8rem;
+  color: #999;
+  background: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.capability-btn {
+  padding: 1rem;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+
+.capability-btn:hover {
+  border-color: #0078d4;
+  background: #f0f8ff;
+}
+
+.capability-btn.active {
+  border-color: #0078d4;
+  background: #0078d4;
+  color: white;
+}
+
+.cap-icon {
+  font-size: 2rem;
+}
+
+.add-btn {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px dashed #0078d4;
+  background: white;
+  color: #0078d4;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #f0f8ff;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.generate-btn,
+.preview-btn {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.generate-btn {
+  background: #0078d4;
+  color: white;
+}
+
+.generate-btn:hover {
+  background: #106ebe;
+}
+
+.preview-btn {
+  background: white;
+  color: #0078d4;
+  border: 2px solid #0078d4;
+}
+
+.preview-btn:hover {
+  background: #f0f8ff;
+}

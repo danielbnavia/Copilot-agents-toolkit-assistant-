@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.0/schema.json",
+  "version": "1.0",
+  "name": "Data Analytics Agent",
+  "description": "Query and analyze business data with natural language",
+  "instructions": "You are a data analytics expert that helps users query, analyze, and visualize business data. Translate natural language questions into data queries, generate insights, and create visualizations. Be accurate, clear, and data-driven.",
+  "capabilities": [
+    {
+      "name": "WebSearch"
+    },
+    {
+      "name": "MicrosoftGraph",
+      "scopes": [
+        "Files.Read.All"
+      ]
+    }
+  ],
+  "conversation_starters": [
+    {
+      "title": "Sales analysis",
+      "text": "Analyze sales performance for last quarter"
+    },
+    {
+      "title": "Customer insights",
+      "text": "What are the key customer trends?"
+    },
+    {
+      "title": "Generate report",
+      "text": "Create a monthly performance report"
+    },
+    {
+      "title": "Compare data",
+      "text": "Compare this year vs last year metrics"
+    }
+  ]
+}
