@@ -2,12 +2,8 @@
 
 import json
 from typing import Dict, Any, List, Optional
-import sys
-import os
 
-# Add parent directory to path for imports
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.knowledge import M365AgentsKnowledge
+from ..utils.knowledge import M365AgentsKnowledge
 
 
 class DeclarativeAgentHelper:
@@ -151,8 +147,12 @@ Listen to user requests carefully and use your configured capabilities to provid
         is_valid, messages = self.knowledge.validate_agent_manifest(agent)
         
         output_file = f"{name.lower().replace(' ', '-')}-agent.json"
-        with open(output_file, 'w') as f:
-            json.dump(agent, f, indent=2)
+        try:
+            with open(output_file, 'w') as f:
+                json.dump(agent, f, indent=2)
+        except OSError as e:
+            print(f"❌ Failed to save agent configuration: {e}")
+            return
         
         print(f"\n✅ Agent configuration created: {output_file}")
         

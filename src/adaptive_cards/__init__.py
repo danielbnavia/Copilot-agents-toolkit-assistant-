@@ -281,8 +281,12 @@ class AdaptiveCardHelper:
         card = self.create_card(card_type, title, data)
         
         output_file = f"{title.lower().replace(' ', '-')}-card.json"
-        with open(output_file, 'w') as f:
-            json.dump(card, f, indent=2)
+        try:
+            with open(output_file, 'w') as f:
+                json.dump(card, f, indent=2)
+        except OSError as e:
+            print(f"❌ Failed to save adaptive card: {e}")
+            return
             
         print(f"\n✅ Adaptive card saved to: {output_file}")
         print(f"\nNext steps:")
