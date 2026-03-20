@@ -132,8 +132,12 @@ class TeamsAgentHelper:
         
         # Save manifest
         manifest_path = os.path.join(bot_dir, "manifest.json")
-        with open(manifest_path, 'w') as f:
-            json.dump(bot, f, indent=2)
+        try:
+            with open(manifest_path, 'w') as f:
+                json.dump(bot, f, indent=2)
+        except OSError as e:
+            print(f"❌ Failed to save manifest: {e}")
+            return
             
         # Create basic bot code
         self._create_bot_code(bot_dir, name, features)
@@ -250,16 +254,23 @@ if __name__ == "__main__":
     web.run_app(app, host="localhost", port=3978)
 '''
         
-        with open(os.path.join(bot_dir, "bot.py"), 'w') as f:
-            f.write(bot_code)
+        try:
+            with open(os.path.join(bot_dir, "bot.py"), 'w') as f:
+                f.write(bot_code)
+        except OSError as e:
+            print(f"❌ Failed to write bot.py: {e}")
+            return
             
         # Create requirements.txt
         requirements = """botbuilder-core>=4.14.0
 botbuilder-schema>=4.14.0
 aiohttp>=3.8.0
 """
-        with open(os.path.join(bot_dir, "requirements.txt"), 'w') as f:
-            f.write(requirements)
+        try:
+            with open(os.path.join(bot_dir, "requirements.txt"), 'w') as f:
+                f.write(requirements)
+        except OSError as e:
+            print(f"❌ Failed to write requirements.txt: {e}")
             
     def add_feature(self):
         """Add a feature to an existing bot."""

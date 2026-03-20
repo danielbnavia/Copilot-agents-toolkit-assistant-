@@ -171,8 +171,12 @@ class WorkflowHelper:
         
         # Save workflow configuration
         config_path = os.path.join(workflow_dir, "workflow.json")
-        with open(config_path, 'w') as f:
-            json.dump(workflow, f, indent=2)
+        try:
+            with open(config_path, 'w') as f:
+                json.dump(workflow, f, indent=2)
+        except OSError as e:
+            print(f"❌ Failed to save workflow configuration: {e}")
+            return
             
         # Create README
         self._create_workflow_readme(workflow_dir, name)
@@ -235,8 +239,12 @@ For issues or questions, refer to the Power Automate documentation:
 https://docs.microsoft.com/en-us/power-automate/
 """
         
-        with open(os.path.join(workflow_dir, "README.md"), 'w') as f:
-            f.write(readme_content)
+        try:
+            with open(os.path.join(workflow_dir, "README.md"), 'w') as f:
+                f.write(readme_content)
+        except OSError as e:
+            # README is non-critical; log the error but do not abort the operation
+            print(f"⚠️  Failed to write README.md: {e}")
             
     def add_action(self):
         """Add an action to existing workflow."""
